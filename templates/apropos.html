@@ -1,0 +1,14 @@
+<html>
+    <head><title>A propos</title></head>
+    <body>
+        <h1> Page A propos de mon site</h1>
+        <p>Voici un lien <a href="https://mkone2023.pythonanywhere.com">vers l'accueil </a></p>
+    <table>
+
+        {% for pers in famille %}
+        <tr><td>{{pers[0]}}</td><td>{{pers[1]}}</td></tr>
+        {% endfor %}
+
+    </table>
+    </body>
+</html>

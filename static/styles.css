@@ -1,0 +1,18 @@
+h1{
+    color: red;
+    text-align:center;
+    text-decoration-line: underline;
+}
+
+#images{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+div.image{
+  margin: 5px 5px 5px 5px;
+  box-shadow: 10px 10px lightred;
+  box-shadow: 5px 5px 10px;
+  padding: 5px;
+  width: 110px;
+}

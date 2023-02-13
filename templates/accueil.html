@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            This rocks !
+        </title>
+        <link href="static/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Galerie d'Arts</h1>
+        <p>Il est {{h}} heure {{m}} minutes {{s}} secondes </p>
+        <p>Oribilis se réveille !  </p>
+
+        <section id="images">
+            {% for (nom,no_ligne,no_col) in noms_images %}
+            <div id="piece-{{no_ligne}}-{{no_col}}" class="image">
+            <img id="{{nom}}" class="image" src="static/{{nom}}">
+            <p>Je suis une pièce de la ligne {{no_ligne}} et de la colonne {{no_col}}</p>
+            </div>
+            {% endfor %}
+        </section>
+
+        <section id="formulaire">
+            <form action="/" method="post">
+                <fieldset>
+                    <legend>Livre d'or</legend>
+                    <label>Nom : <input type="text" name="nom">  </label>
+
+                    <label>date de naissance</label>
+                    <input type="date" name="naiss" min="2000-01-01" max="2023-01-01">
+
+                    <div id="choix">
+                    Aimez-vous les oeuvres d'art ci-dessus ?
+                    <label>Oui<input type="radio" name="choix" value="oui"> </label>
+                    <label>Non<input type="radio" name="choix" value="non"> </label>
+                    </div>
+                    <label>Combien voulez vous créer de ses NFT ?<input type="number" name="qty"></label>
+
+
+
+
+                </fieldset>
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
+
+        <section id="reponse">
+            {{reponse}}
+        </section>
+    </body>
+</html>
